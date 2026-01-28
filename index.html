@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAMAR™ Sparring Autonomous Martial Arts Robot</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #141821;
+      --accent: #ff3b3b;
+      --text: #e6e8ee;
+      --muted: #9aa0b4;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 70% -10%, #1a2030, var(--bg));
+      color: var(--text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background: rgba(11,13,16,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 520px;
+    }
+
+    .cta {
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      margin-right: 12px;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #2a2f3f;
+      color: var(--text);
+    }
+
+    .robot-card {
+      background: linear-gradient(180deg, #1a1f2d, #0f131c);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .robot {
+      width: 100%;
+      max-width: 320px;
+      margin: auto;
+      aspect-ratio: 3 / 5;
+      background: linear-gradient(180deg, #2b3145, #161a26);
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .robot::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 16px;
+      border: 1px solid #3a415a;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .mission {
+      background: var(--panel);
+      text-align: center;
+      font-size: large;
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .demos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .demo {
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    .feature {
+      background: var(--panel);
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    .feature h3 { margin-top: 0; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat {
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .stat span {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #1f2433;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero p { margin: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SAMAR Robotics</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#demos">Demos</a>
+      <a href="#training">Training</a>
+      <a href="#specs">Specs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Train Against the Machine</h1>
+        <p>
+          SAMAR - Sparring Autonomous Martial Arts Robot - is an intelligent sparring robot inspired by elite combat sports.
+          Adaptive AI, human‑safe actuators, and real‑time strike analysis—built for fighters, gyms, and labs.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact Us</a>
+          <a class="btn secondary" href="#features">Explore Features</a>
+        </div>
+      </div>
+      <div class="robot-card">
+        <img src="images/samar_prototype.jpg" alt="SAMAR prototype" width="300" height="500">
+      </div>
+    </div>
+
+    <section id="mission-id">
+      
+        <div class="mission">
+          <h2>Our Mission</h2>
+          <p>SAMAR Robotics is an early-stage robotics startup developing an autonomous, interactive training robot designed to simulate real-world martial arts sparring. Our prototype integrates omnidirectional mobility, LIDAR-based perception, and onboard computation to dynamically reposition itself relative to a human user, maintaining safe and realistic engagement distances in real time. Our mission is to make high-quality, responsive sparring training accessible to individuals who lack consistent access to human training partners, while laying the groundwork for broader applications in interactive robotics, human–robot interaction, and embodied autonomy.</p>
+        </div>
+    </section>
+
+    <section id="features">
+      <h2>Core Features In Development</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Adaptive Sparring AI</h3>
+          <p>Continuously adjusts speed, power, and tactics based on your performance. Learns your fighting style and predicts your movements.</p>
+        </div>
+        <div class="feature">
+          <h3>Human‑Safe Actuation</h3>
+          <p>Senses objects and movement and dodges strikes for realistic but safe training.</p>
+        </div>
+        <div class="feature">
+          <h3>Strike Analytics</h3>
+          <p>Tracks accuracy, force, reaction time, combos, and fatigue in real time.</p>
+        </div>
+        <div class="feature">
+          <h3>Martial Arts Trained</h3>
+          <p>Select your sport (Taekwondo, Boxing, Muay Thai, and more) and SAMAR will adjust its fighting mode to best help you train.</p>
+        </div>
+        <div class="feature">
+          <h3>Modular Armor</h3>
+          <p>Swappable bags to simulate different opponents, heights, and sizes.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="demos">
+      <div class="demos">
+        <div class="demo">
+          <h2>SAMAR Movement Demo</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dPjG0p-31MU?si=WDvpxWHymLXogRZb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="demo">
+          <h2>SAMAR Tracking Demo</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SVckKlRAG6c?si=V0W5P3xBtJ7F8-q9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="training">
+      <h2>Training Modes</h2>
+      <div class="features">
+        <div class="feature"><h3>Beginner</h3><p>Slow, predictable moves focused on fundamentals.</p></div>
+        <div class="feature"><h3>Competitive</h3><p>Dynamic combinations and path patterns.</p></div>
+        <div class="feature"><h3>Elite</h3><p>High‑speed reactions inspired by professional fighters.</p></div>
+        <div class="feature"><h3>Custom</h3><p>Program your own routines via API or tablet app.</p></div>
+      </div>
+    </section>
+
+    <section id="specs">
+      <h2>Proof-of-Concept Specs</h2>
+      <div class="stats">
+        <div class="stat"><span>360 LIDAR</span><p>Sensors</p></div>
+        <div class="stat"><span>3</span><p>Omnidirectional Wheels</p></div>
+        <div class="stat"><span>0.7 sec.</span><p>Time to scan 360&deg; of view</p></div>
+        <div class="stat"><span>34in.</span><p>Height of Base</p></div>
+      </div>
+    </section>
+
+    <section id="next-steps">
+      <h2>What's Next?</h2>
+      <div class="steps">
+        <p>We are actively developing the next-generation mechanical platform for the SAMAR robot, transitioning from a proof-of-concept wooden prototype to a manufacturable, modular, and lightweight chassis.
+
+This includes:
+
+A redesigned structural frame (moving toward aluminum or composite materials)
+
+Optimized mounting for sensors, motors, and electronics
+
+Improved load-bearing support for freestanding training bags
+
+Modular assemblies to support future variants and accessories
+
+Tight mechanical tolerances to reduce drift and improve sensor alignment
+
+CAD is central to this work, as mechanical geometry directly affects autonomy performance, sensor visibility, stability, and safety.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in the Ring</h2>
+      <p style="color: var(--muted); max-width: 520px;">
+        Interested in pilots, gym partnerships, or research deployments? Want to learn more about our product roadmap and design?
+        Contact us for early access and demos.
+      </p>
+      <div class="cta">
+        <a class="btn" href="mailto:jagarrett@ymail.com">Contact Sales</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 SAMAR Robotics
+  </footer>
+</body>
+</html>
